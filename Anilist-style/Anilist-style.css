@@ -85,7 +85,7 @@ i.fa.fa-plus-circle, .data.tags
 .text, .link, .status-button.on
 {font-weight: normal !important;}
 
-@media header-leftbar {}
+/* -- header-leftbar -- */
 .header
 {position: fixed;
 z-index: 600 !important;
@@ -103,7 +103,7 @@ height: 60px;}
 .header, .header .header-title, .list-menu-float, .list-menu-float .icon-menu, .list-menu-float .icon-menu.profile:after, .list-menu-float .icon-menu:hover .text
 {width: 60px;}
 
-@media header-mal-logo {}
+/* -- header-mal-logo -- */
 .header .header-title
 {position: fixed;
 font-size: 0;
@@ -115,7 +115,7 @@ height: 60px;
 border-top: 30px solid #181f29;
 background-size: cover;}
 
-@media header-leftbar-menu {}
+/* -- header-leftbar-menu -- */
 .list-menu-float
 {top: 0;
 z-index: 700 !important;}
@@ -156,7 +156,7 @@ color: #181f29;}
 {border: none;
 color: #fff;}
 
-@media header-sort-by {}
+/* -- header-sort-by -- */
 .list-table-header
 {float: right;
 margin-left: 100%;
@@ -174,7 +174,7 @@ font-weight: normal;}
 .list-table .list-table-header .header-title .link.sort
 {color: #777;}
 
-@media topbar {}
+/* -- topbar -- */
 .list-block
 {margin-left: 60px;}
 
@@ -208,7 +208,7 @@ padding-left: 60px;}
 {background: none;
 z-index: 110}
 
-@media topbar-status {}
+/* -- topbar-status -- */
 .status-menu-container .status-menu
 {display: inline-block;
 border-spacing: 0;
@@ -242,7 +242,7 @@ background: #1f2631}
 {color: #6ebcf4 !important;
 background: #181f29 !important}
 
-@media topbar-search {}
+/* -- topbar-search -- */
 .status-menu-container .search-container
 {top: 0;
 right: 145px}
@@ -266,7 +266,7 @@ left: 0;
 top: 13px;
 font-size: .7em;}
 
-@media topbar-fixed {}
+/* -- topbar-fixed -- */
 .status-menu-container.fixed, .fixed + div.list-block .list-status-title, .fixed + div.list-block .list-unit .list-stats
 {position: fixed !important;
 top: 0 !important;}
@@ -298,7 +298,7 @@ top: 6px}
 .header .header-menu .list-menu .icon-menu:hover
 {background: none}
 
-@media covers {} /* credit to LukeLC */
+/* -- covers -- */ /* credit to LukeLC */
 .list-table tbody:first-child
 {margin: 115px 0 0 0;
 display: block;}
@@ -348,7 +348,7 @@ position: absolute;}
 .list-item:hover .data, .list-item .data.image, .list-item .data.title, .list-item:hover .data.title *, .list-item .data.score, .list-item .data.progress, .list-item .data.chapter, a[href*="%C2%9"]
 {opacity: 1;}
 
-@media entrytitle {}
+/* -- entrytitle -- */
 .data.title > a
 {position: absolute;
 z-index: 5;
@@ -364,7 +364,7 @@ padding: 10px 10px 31px !important;}
 .list-table .list-table-data .data.title .link
 {font-size: 1.04em;}
 
-@media entrytitle-add-edit-more {}
+/* -- entrytitle-add-edit-more -- */
 .add-edit-more
 {color: transparent;}
 
@@ -375,7 +375,7 @@ left: 0;
 cursor: default;
 color: transparent;}
 
-@media entryscore {}
+/* -- entryscore -- */
 .list-item .data.score
 {right: 10px;}
 
@@ -399,7 +399,7 @@ word-spacing: -2px;}
 {width: 10px !important;
 background: none;}
 
-@media entrytype-status {}
+/* -- entrytype-status -- */
 .list-item .data.type
 {padding: 12px 15px !important;
 color: white;
@@ -418,7 +418,7 @@ color: #fff !important;
 opacity: 0;
 transition: opacity .15s ease-in-out;}
 
-@media huge-status-tag-block {}
+/* -- huge-status-tag-block -- */
 .list-item:hover .data.tags:before
 {opacity: 1;}
 
@@ -473,7 +473,7 @@ letter-spacing: -1px;
 background: #00a8ff;
 width: 15px !important;}
 
-@media entrytags-textarea {}
+/* -- entrytags-textarea -- */
 .data.tags textarea
 {position: absolute; font-family: monospace!important;
 z-index: 200;}
@@ -481,7 +481,7 @@ z-index: 200;}
 .edit-transition.edit-leave
 {display: none;}
 
-@media entrytags-editbutton {}
+/* -- entrytags-editbutton -- */
 .tags .edit
 {position: absolute;
 top: 3px;
@@ -492,7 +492,7 @@ font-size: 0 !important;}
 .tags .edit:hover
 {width: 24px !important;}
 
-@media entrytags-padding {}
+/* -- entrytags-padding -- */
 div[class*="tags-"] span:first-child:before
 {content: '';
 display: block;
@@ -517,7 +517,7 @@ white-space: nowrap;
 text-shadow: 0 0 3px #000;
 display: inline;}
 
-@media entrytags-favorites {}
+/* -- entrytags-favorites -- */
 a[href$="&tag=*"]
 {position: absolute;
 left: 0;
@@ -538,7 +538,7 @@ border-right: 3px solid;
 background: #2e3847;
 pointer-events: all;}
 
-@media entrytags-mangaka {}
+/* -- entrytags-mangaka -- */
 a[href*="%C2%9"]
 {position: absolute;
 left: 0;top:180px;
@@ -547,7 +547,7 @@ white-space: nowrap;
 padding: 0 !important;
 margin: 10px;}
 
-@media entrytags-anime-comments {}
+/* -- entrytags-anime-comments -- */
 .anime [href*="&tag="]
 {white-space: normal !important;
 text-transform: none;
@@ -558,7 +558,7 @@ pointer-events: none;}
 height: 25px;
 float: left;}
 
-@media entrystatus-colors-and-tab-icons {}
+/* -- entrystatus-colors-and-tab-icons -- */
 .status.reading, .status.watching
 {border-left: 4px solid #f7464a}
 .status.plantoread, .status.plantowatch
@@ -596,7 +596,7 @@ float: left;}
 
 
 
-@media mediaquery {}
+/* -- mediaquery -- */
 @media (min-width:1901px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1530px !important;}}
@@ -624,7 +624,7 @@ float: left;}
 .header .header-menu .btn-menu
 { display: none;}}
 
-@media personal {}
+/* -- personal -- */
 .data.volume, .data.chapter, span a[href*="%CB%93"], span a[href*="%CB%91"], span a[href*="%E2%80%A7"] {display: none !important;}
 
 
