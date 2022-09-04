@@ -1,5 +1,10 @@
-@\import "//fonts.googleapis.com/css?family=Montserrat:400, 700";
-@\import "https://malscraper.azurewebsites.net/covers/auto/presets/dataimagelink";
+@\import '@\import "//fonts.googleapis.com/css?family=Montserrat:400, 700";';
+
+/*
+Anilist-style by Ruri
+Modifications by Valerio Lyndon
+Last update: 2022-Sep-03
+*/
 
 
 /* SIZE OF HIGH RES COVERS*/
@@ -19,27 +24,21 @@ height: 215px !important;
 /* PLACEMENT OF THE TYPE TEXT
 Where you'll see OVA, Movie, TV, etc when you point to a cover.*/
 .list-item .data.type {
-margin-top: -30px !important;
-margin-left: 49px !important;
+	right: 0;
 }
 
 
 /* COLOR OF BACKGROUND */
-.list-container, #status-menu, .list-unit, .list-unit .list-status-title {
-background-color: #F5F8FA !important;
+html, .list-container {
+	background: #f8f8f8;
 }
 
 
 /* COLOR OF SIDEBAR */
 .list-menu-float .icon-menu, .header {
-background-color: #1F2631 !important;
+	background-color: #1F2631 !important;
 }
 
-
-/* COLOR OF LIST SORTING OPTIONS */
-.list-table .list-table-header .header-title{
-background-color: #FFFFFF !important;
-}
 
 /* FONT SIZE */
 body {font-size: 13px !important;}
@@ -355,8 +354,7 @@ position: absolute;}
 z-index: 5;
 color: #fff;
 bottom: 31px;
-margin-right: 10px;
-text-shadow: 0 0 3px #000}
+margin-right: 10px;}
 
 .list-item .data.title
 {box-sizing: border-box;
@@ -408,8 +406,6 @@ color: white;
 font-size: 1em;
 text-shadow: 0 0 3px #000;
 transition: opacity .15s ease-in-out;
-margin-top: 178px;
-margin-left: 49px;
 }
 
 .data.title .rewatching, .data.title .rereading, .data.title .content-status
@@ -472,7 +468,7 @@ opacity: 0;
 margin-top: 3px;}
 
 .data.tags:hover:before
-{content: 'f02b0a0';
+{content: '\f02b';
 letter-spacing: -1px;
 background: #00a8ff;
 width: 15px !important;}
@@ -532,7 +528,7 @@ top: 0;
 color: transparent !important;}
 
 a[href$="&tag=*"]:after
-{content: 'f004';
+{content: '\f004';
 color: #ff2c55 !important;
 margin: 165px -3px;
 padding: 3px 6px;
@@ -545,7 +541,7 @@ pointer-events: all;}
 @media entrytags-mangaka {}
 a[href*="%C2%9"]
 {position: absolute;
-left: 0;
+left: 0;top:180px;
 text-align: left;
 white-space: nowrap;
 padding: 0 !important;
@@ -586,17 +582,17 @@ float: left;}
 {background: #dcdcdc}
 
 .status.reading:hover:after
-{content: 'f02e';}
+{content: '\f02e';}
 .status.watching:hover:after
-{content: 'f008';}
+{content: '\f008';}
 .status.plantowatch:hover:after, .status.plantoread:hover:after
-{content: 'f073';}
+{content: '\f073';}
 .status.completed:hover:after
-{content: 'f00c';}
+{content: '\f00c';}
 .status.onhold:hover:after
-{content: 'f04c';}
+{content: '\f04c';}
 .status.dropped:hover:after
-{content: 'f00d';}
+{content: '\f00d';}
 
 
 
@@ -604,12 +600,12 @@ float: left;}
 @media (min-width:1901px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1530px !important;}}
-@media (max-width:1900px)
-{#status-menu, .list-unit, .list-unit .list-status-title
-{ width: 1360px !important;}}
 @media (max-width:1700px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1190px !important;}}
+@media (max-width:1900px)
+{#status-menu, .list-unit, .list-unit .list-status-title
+{ width: 1360px !important;}}
 @media (max-width:1500px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1020px !important;}}
@@ -654,10 +650,7 @@ width: 150px;
 height: 15px !important;
 padding-right: 28px !important;
 }
-.list-table .list-table-data .data.title .add-edit-more .edit a:hover,
-.list-table .list-table-data .data.title .add-edit-more .add a:hover{
-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
-}
+
 .data.status {opacity: 1 !important;
 top: 28px !important;}
 
