@@ -345,7 +345,7 @@ position: absolute;}
 
 
 
-.list-item:hover .data, .list-item .data.image, .list-item .data.title, .list-item:hover .data.title *, .list-item .data.score, .list-item .data.progress, .list-item .data.chapter, a[href*="%C2%9"]
+.list-item:hover .data, .list-item .data.image, .list-item .data.title, .list-item:hover .data.title *, .list-item .data.score, .list-item .data.progress, .list-item .data.chapter
 {opacity: 1;}
 
 /* -- entrytitle -- */
@@ -382,7 +382,7 @@ color: transparent;}
 .score select.edit-transition
 {margin-right: -20px;}
 
-.data.score, .data.progress, .data.chapter, .data.volume, a[href*="%C2%9"]
+.data.score, .data.progress, .data.chapter, .data.volume
 {z-index: 30;
 bottom: 0;
 padding: 10px !important;
@@ -425,11 +425,13 @@ transition: opacity .15s ease-in-out;}
 .data.status
 {height: 15px !important;
 top: 28px !important;
-background: none !important;}
+background: none !important;
+opacity: 1 !important;
+top: 28px !important;}
 
 .data.status, .data.tags:before
 {margin-left: -4px;
-width: 12px !important;
+width: 24px !important;
 padding: 5px 0 !important;
 z-index: 10;}
 
@@ -458,14 +460,14 @@ width: 0;}
 transition: opacity .15s ease-in-out;}
 
 .data.tags:hover *
-{width: 150px;
-opacity: 1 !important;}
+{opacity: 1;}
 
 .data.tags:before
 {content: '';
 border-left: 4px solid #00a8ff;
 opacity: 0;
-margin-top: 3px;}
+margin-top: 3px;
+pointer-events: auto;}
 
 .data.tags:hover:before
 {content: '\f02b';
@@ -493,20 +495,16 @@ font-size: 0 !important;}
 {width: 24px !important;}
 
 /* -- entrytags-padding -- */
-div[class*="tags-"] span:first-child:before
-{content: '';
-display: block;
-margin-top: 3px;}
+.tags div {
+	border-radius: 3px;
+	pointer-events: none;
+}
+.data.tags:hover div {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.54) 50%, rgba(0, 0, 0, 0) 100%);
+	pointer-events: auto;
+}
 
-div[class*="tags-"] span:last-child
-{margin-right: 4px;}
-
-div[class*="tags-"]
-{overflow: hidden;
-transition: opacity .2s .1s;
-border-radius: 3px;}
-
-[href*="&tag="]:not([href$="&tag=*"]):not([href*="%C2%9"])
+.tags span a
 {opacity: 0;
 font-size: .9em;
 line-height: 1.56em;
@@ -515,48 +513,12 @@ border-radius: 3px;
 margin-right: 3px;
 white-space: nowrap;
 text-shadow: 0 0 3px #000;
-display: inline;}
-
-/* -- entrytags-favorites -- */
-a[href$="&tag=*"]
-{position: absolute;
-left: 0;
-width: 150px;
-height: 0;
-font-size: 15px;
-top: 0;
-color: transparent !important;}
-
-a[href$="&tag=*"]:after
-{content: '\f004';
-color: #ff2c55 !important;
-margin: 165px -3px;
-padding: 3px 6px;
-font-size: 0.87em;
-display: inline-block;
-border-right: 3px solid;
-background: #2e3847;
-pointer-events: all;}
-
-/* -- entrytags-mangaka -- */
-a[href*="%C2%9"]
-{position: absolute;
-left: 0;top:180px;
-text-align: left;
-white-space: nowrap;
-padding: 0 !important;
-margin: 10px;}
-
-/* -- entrytags-anime-comments -- */
-.anime [href*="&tag="]
-{white-space: normal !important;
+display: inline;
+white-space: normal !important;
 text-transform: none;
-pointer-events: none;}
+transition: opacity .2s .1s;}
 
-.anime div[class*="tags-"] span:first-child:before
-{width: 25px;
-height: 25px;
-float: left;}
+
 
 /* -- entrystatus-colors-and-tab-icons -- */
 .status.reading, .status.watching
@@ -600,12 +562,12 @@ float: left;}
 @media (min-width:1901px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1530px !important;}}
-@media (max-width:1700px)
-{#status-menu, .list-unit, .list-unit .list-status-title
-{ width: 1190px !important;}}
 @media (max-width:1900px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1360px !important;}}
+@media (max-width:1700px)
+{#status-menu, .list-unit, .list-unit .list-status-title
+{ width: 1190px !important;}}
 @media (max-width:1500px)
 {#status-menu, .list-unit, .list-unit .list-status-title
 { width: 1020px !important;}}
@@ -623,9 +585,6 @@ float: left;}
 { width: 340px !important;}
 .header .header-menu .btn-menu
 { display: none;}}
-
-/* -- personal -- */
-.data.volume, .data.chapter, span a[href*="%CB%93"], span a[href*="%CB%91"], span a[href*="%E2%80%A7"] {display: none !important;}
 
 
 
@@ -646,28 +605,14 @@ text-align: right !important;
 text-transform: capitalize;
 width: 150px;
 }
-.data.status {
-height: 15px !important;
-padding-right: 28px !important;
-}
-
-.data.status {opacity: 1 !important;
-top: 28px !important;}
 
 .header .header-title{
 display: none;
 }
 
-.data.status {
-opacity: 1 !important;
-top: 28px !important;}
-
 
 .list-item .data.title
 {background: linear-gradient(to top, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .00784314) 60%);}
-
-div[class*="tags-"]{
-background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.54) 50%, rgba(0, 0, 0, 0) 100%);}
 
 
 

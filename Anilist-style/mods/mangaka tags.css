@@ -1,0 +1,10 @@
+/* -- entrytags-mangaka -- */
+.data.volume, .data.chapter {display: none !important;}
+
+a[href*="%C2%9"]
+{position: absolute;
+left: 0;top:180px;
+text-align: left;
+white-space: nowrap;
+padding: 0 !important;
+margin: 10px;}

@@ -1,0 +1,22 @@
+/* -- entrytags-favorites -- */
+.tags span [href$="=*"]
+{position: absolute;
+z-index: 33;
+width: auto;
+height: 0;
+font-size: 0;
+top: 165px;
+right: -6px;
+color: transparent !important;
+opacity: 1;}
+
+.tags span [href$="=*"]:after
+{content: '\f004';
+color: #ff2c55 !important;
+padding: 3px 6px;
+font-size: 13px;
+line-height: 15px;
+display: inline-block;
+border-right: 3px solid;
+background: #2e3847;
+pointer-events: auto;}
