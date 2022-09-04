@@ -29,8 +29,8 @@ Where you'll see OVA, Movie, TV, etc when you point to a cover.*/
 
 
 /* COLOR OF BACKGROUND */
-html, .list-container {
-	background: #f8f8f8;
+body.ownlist {
+	background: #f8f8f8 !important;
 }
 
 
@@ -52,8 +52,21 @@ body {font-size: 13px !important;}
 .more, .link.sort + a, .header-menu .icon, .fancy-bg, .list-unit .list-status-title .text, .status-menu-container .status-menu .status-button:after
 {display: none;}
 
-a, .header a:hover, .header .header-menu .list-menu .icon-menu:hover, .list-item, .data.progress:hover .fa, .data.chapter:hover .fa, .data.volume:hover .fa, .list-table .list-table-data, .list-table .list-table-header .header-title .link.sort:hover, .list-menu-float .icon-menu .text, .list-unit .list-status-title .stats a, .list-table .list-table-data a:not(.edit-disabled):hover, .list-table .list-table-data a.edit-disabled, .list-table .list-table-header .header-title .sort-icon, .fa-search:before
-{color: #00a8ff;}
+.header a:hover,
+.header .header-menu .list-menu .icon-menu:hover,
+.list-item,
+.data.progress:hover .fa,
+.data.chapter:hover .fa,
+.data.volume:hover .fa,
+.list-table .list-table-header .header-title .link.sort:hover,
+.list-table .list-table-header .header-title .sort-icon,
+.list-table .list-table-data,
+.list-table .list-table-data .data a:not(.edit-disabled),
+.list-unit .list-status-title .stats a,
+.list-table .list-table-data a:not(.edit-disabled):hover,
+.list-table .list-table-data a.edit-disabled,
+.fa-search:before
+{color: #00a8ff !important;}
 
 html {overflow-x: hidden;}
 td {font-size: .96em;}
@@ -65,8 +78,9 @@ a
 a, i.fa.fa-plus-circle
 {transition: color .15s ease-in-out;}
 
-html, .list-container
-{background: #f8f8f8;}
+.list-container {
+	background: none !important;
+}
 
 input
 {font-size: 1em !important;
@@ -92,13 +106,15 @@ z-index: 600 !important;
 width: 100%;
 height: 100%;}
 
-.header a, .header .header-menu
+.header a, .header .header-menu, .header .header-menu .btn-menu
 {color: #323232;
 left: 80px;
 height: 60px;}
 
-.header .header-menu .list-menu .icon-menu
-{color: #323232;}
+.header .header-menu .list-menu .icon-menu,
+.list-menu-float .icon-menu .text,
+.list-menu-float .icon-menu a
+{color: #323232 !important;}
 
 .header, .header .header-title, .list-menu-float, .list-menu-float .icon-menu, .list-menu-float .icon-menu.profile:after, .list-menu-float .icon-menu:hover .text
 {width: 60px;}
@@ -349,12 +365,14 @@ position: absolute;}
 {opacity: 1;}
 
 /* -- entrytitle -- */
-.data.title > a
+.data.title .link
 {position: absolute;
 z-index: 5;
-color: #fff;
 bottom: 31px;
 margin-right: 10px;}
+
+.list-table .list-table-data .data.title .link:not(:hover)
+{color: #fff !important;}
 
 .list-item .data.title
 {box-sizing: border-box;
@@ -373,7 +391,7 @@ padding: 10px 10px 31px !important;}
 top: 0;
 left: 0;
 cursor: default;
-color: transparent;}
+color: transparent !important;}
 
 /* -- entryscore -- */
 .list-item .data.score
@@ -477,8 +495,12 @@ width: 15px !important;}
 
 /* -- entrytags-textarea -- */
 .data.tags textarea
-{position: absolute; font-family: monospace!important;
-z-index: 200;}
+{
+	position: absolute;
+	z-index: 200;
+	left: 0;
+	font-family: monospace!important;
+}
 
 .edit-transition.edit-leave
 {display: none;}
@@ -487,7 +509,7 @@ z-index: 200;}
 .tags .edit
 {position: absolute;
 top: 3px;
-width: 14px !important;
+width: 24px !important;
 height: 25px;
 font-size: 0 !important;}
 
@@ -508,7 +530,6 @@ font-size: 0 !important;}
 {opacity: 0;
 font-size: .9em;
 line-height: 1.56em;
-color: #fff;
 border-radius: 3px;
 margin-right: 3px;
 white-space: nowrap;
@@ -517,6 +538,9 @@ display: inline;
 white-space: normal !important;
 text-transform: none;
 transition: opacity .2s .1s;}
+.list-table .list-table-data .data.tags a:not(:hover) {
+	color: #fff !important;
+}
 
 
 
@@ -628,9 +652,18 @@ color: #777;
 .status-menu-container .search-container #search-button {
 margin-right: 10px;}
 
+#footer-block {
+	width: auto !important;
+	background: none;
+}
+
 #copyright{
 position: absolute;
 font-size: 10px;
 z-index: 100;
 right: 0%;
+}
+#recaptcha-terms,
+#cover-image-container {
+	display: none;
 }
